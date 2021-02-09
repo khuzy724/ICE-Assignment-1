@@ -23,7 +23,6 @@ public class Card {
      * @return the suit
      */
     public String getSuit() {
- 
         return this.suit;
     }
 
@@ -31,11 +30,10 @@ public class Card {
      * @param suit the suit to set
      */
     public void setSuit(String suit) {
-       int x = (int)(Math.random() * 4);
        if ("Hearts".equalsIgnoreCase(suit) || "Diamonds".equalsIgnoreCase(suit)||"Spades".equalsIgnoreCase(suit)||"Clubs".equalsIgnoreCase(suit)){
        this.suit=suit;
-       }else {
-       this.suit = SUITS[x];
+       }else{
+       this.suit = SUITS[(int)(Math.random() * 4)];
        }
     }
 
@@ -50,7 +48,6 @@ public class Card {
      * @param value the value to set
      */
     public void setValue(int value) {
-        value = (int)(1+ Math.random() * 13);
         this.value = value;
     }
    

@@ -15,12 +15,13 @@ import java.util.Scanner;
  */
 public class CardTrick {
 
+     
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            c.setValue(i);
+            c.setValue((int)(1+ Math.random() * 13));
             c.setSuit("x");
             switch (c.getValue()) {
                 case 1:
@@ -39,7 +40,6 @@ public class CardTrick {
                     System.out.println("Card number " + (i + 1) + " is: The " + c.getValue() + " of " + c.getSuit());
                     break;
             }
-            System.out.println(magicHand[1]);
         }
             
         //insert code to ask the user for Card value and suit, create their card
