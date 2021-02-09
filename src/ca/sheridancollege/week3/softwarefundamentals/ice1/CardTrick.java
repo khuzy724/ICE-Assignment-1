@@ -78,7 +78,7 @@ public class CardTrick {
              if(card.getValue() == userCard.getValue() && card.getSuit().equals(userCard.getSuit())){
                  System.out.println("Your card is in the magic hand");
              } 
-             
+             Card luckyCard = new Card(4, "Hearts");
          }
          
     }
