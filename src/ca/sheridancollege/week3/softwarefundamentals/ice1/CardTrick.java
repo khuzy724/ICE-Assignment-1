@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Khuzaima Ashraf
+* 991586242
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
@@ -20,7 +19,7 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
+            //c.setValue(insert call to random number generator here) hello
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
         
