@@ -23,7 +23,9 @@ public class Card {
      * @return the suit
      */
     public String getSuit() {
-        return suit;
+        int x = (int)((Math.random() * (3-1)) +1);
+       this.suit = SUITS[x];
+        return this.suit;
     }
 
     /**
@@ -44,6 +46,7 @@ public class Card {
      * @param value the value to set
      */
     public void setValue(int value) {
+        value = (int)((Math.random() * (52-1)) +1);
         this.value = value;
     }
    
