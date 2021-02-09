@@ -15,23 +15,20 @@ import java.util.Scanner;
  */
 public class CardTrick {
 
-     
     public static void main(String[] args) {
         Scanner k = new Scanner(System.in);
-        
+
         Card[] magicHand = new Card[7];
-        
+
         for (int i = 0; i < magicHand.length; i++) {
-            
-            
+
             // random number generator for card value and suit
-            
-            int value = ((int)( Math.random() * 13 + 1));
-            String suit = Card.SUITS[(int)(Math.random() * 4 )];
-            
+            int value = ((int) (Math.random() * 13 + 1));
+            String suit = Card.SUITS[(int) (Math.random() * 4)];
+
             Card randomCard = new Card(value, suit);
             magicHand[i] = randomCard;
-              switch (randomCard.getValue()) {
+            switch (randomCard.getValue()) {
                 case 1:
                     System.out.println("Card number " + (i + 1) + " is: The Ace of " + randomCard.getSuit());
                     break;
@@ -49,15 +46,16 @@ public class CardTrick {
                     break;
             }
         }
-             Card luckyCard = new Card(4, "Hearts");
-              for (Card card:magicHand){
-         if(card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckyCard.getSuit())){
-             System.out.println("\n");
-                 System.out.println("The lucky card is in the magic hand! YOU WIN");}
-         else{System.out.println("Sorry you lose");}
-    }
-         
+        boolean search = false;
+        Card luckyCard = new Card(4, "Hearts");
+        for (Card card : magicHand) {
+            if (card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckyCard.getSuit())) {
+                search = true;
+                break;
+            }
+        }
+        System.out.print("\n");
+if (search){System.out.println("YOU WIN");}
+else{System.out.println("Sorry You Lose");}
     }
 }
-
-
